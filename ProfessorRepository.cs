@@ -8,12 +8,15 @@ namespace BaseApp
 {
     class ProfessorRepository : IBaseRepository
     {
+        public IStorage Storage;
+
+        public ProfessorRepository(IStorage storage) 
+        {
+            this.Storage = storage;
+        }
+        
         public void Insert(BaseEntity baseEntity) {
-            Type t = typeof(Professor);
-            if (typeof(BaseEntity) == t) 
-            {
-                Console.WriteLine("Saved professor: "+baseEntity);    
-            }
+            Console.WriteLine(this.Storage.Save(baseEntity));
         }
     }
 }

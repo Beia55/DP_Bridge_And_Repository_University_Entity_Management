@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BaseApp
 {
-    class Dv: IStorage
+    class DB: IStorage
     {
         public string Save(BaseEntity baseEntity)
         {

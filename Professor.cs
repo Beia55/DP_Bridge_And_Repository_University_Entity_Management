@@ -10,15 +10,10 @@ namespace BaseApp
     {
         public string Specification { get; set; }
 
-        public Professor(string specification, string name,IStorage storage)
-            : base(name, storage)
+        public Professor(string specification, string name)
+            : base(name)
         {
             this.Specification = specification;
-        }
-
-        public override void Print()
-        {
-            Console.WriteLine(base.Storage.Save(this));
         }
 
         public override string ToString()

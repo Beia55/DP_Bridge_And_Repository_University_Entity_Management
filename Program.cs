@@ -7,8 +7,12 @@ namespace BaseApp
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            BaseEntity baseEntity = new Student(2, "Beia", new CSV());
-            baseEntity.Print();
+
+            StudentRepository studentRepository = new StudentRepository(new CSV());
+            studentRepository.Insert(new Student(2, "Beia"));
+
+            ProfessorRepository professorRepository = new ProfessorRepository(new DB());
+            professorRepository.Insert(new Professor("IProfName1", "inginerie"));
 
         }
     }

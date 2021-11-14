@@ -9,15 +9,11 @@ namespace BaseApp
     public abstract class BaseEntity
     {
         public string Name { get; set; }
-        public IStorage Storage { get; set; }
 
-        public BaseEntity(string name, IStorage storage)
+        public BaseEntity(string name)
         {
             this.Name = name;
-            this.Storage = storage;
         }
-
-        public abstract void Print();
 
         public override string ToString()
         {

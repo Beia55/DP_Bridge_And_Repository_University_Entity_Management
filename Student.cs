@@ -10,15 +10,10 @@ namespace BaseApp
     {
         public int Year { get; set; }
 
-        public Student(int year, string name, IStorage storage)
-            : base(name, storage)
+        public Student(int year, string name)
+            : base(name)
         {
             this.Year = year;
-        }
-
-        public override void Print()
-        {
-            Console.WriteLine(base.Storage.Save(this));
         }
 
         public override string ToString()
